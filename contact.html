@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Neil's Projects</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
+.w3-bar,h1,h2,button {font-family: "Montserrat", sans-serif}
+.fa-envelope-o {font-size:150px}
+
+</style>
+</head>
+
+<body onload="newQuote()">
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-black w3-card w3-left-align w3-large">
+    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-black" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="index.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Home</a>
+    <a href="ot.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Occupational Therapy</a>
+    <a href="bjj.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Brazilian Jiu Jitsu</a>
+    <a href="retro.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Retro Computers</a>
+    <a href="contact.html" class="w3-bar-item w3-button w3-padding-large w3-white">Contact</a>
+  </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+    <a href="index.html" class="w3-bar-item w3-button w3-padding-large">Home</a>
+    <a href="ot.html" class="w3-bar-item w3-button w3-padding-large">Occupational Therapy</a>
+    <a href="bjj.html" class="w3-bar-item w3-button w3-padding-large">Brazilian Jiu Jitsu</a>
+    <a href="retro.html" class="w3-bar-item w3-button w3-padding-large">Retro Computers</a>
+
+  </div>
+</div>
+
+<!-- Header -->
+
+<header class="bgimg w3-display-container w3-center w3-amber w3-padding-32">
+  <br><br>
+  <h1 class="w3-margin w3-xxlarge">Contact Me</h1>
+
+</header>
+
+<!-- First Grid -->
+<div class="w3-row-padding w3-padding-64 w3-container">
+  <div class="w3-content">
+    <div class="w3-twothird">
+      <h2>Send Me an Email</h2>
+      <h5 class="w3-padding-16">If you are interested in any of my projects or just want to have a chat, then feel free to send me email - <a href="mailto:neilowoodroffe@hotmail.com?subject=Hi%20Neil%20re%20GitHub%20Project">neilowoodroffe@hotmail.com</a></h5>
+    </div>
+    <div class="w3-third w3-center">
+      <i class="fa fa-envelope-o w3-text-black w3-margin-right"></i>
+      <!--img src="img/neil.png"-->
+    </div>
+  </div>
+</div>
+
+<div class="w3-container w3-black w3-center w3-opacity w3-padding-32">
+    <h1 class="w3-margin w3-xlarge">Inspirational Quote:</h1>
+    <div id="quoteDisplay">
+      <!-- Quote Goes Here -->
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-16 w3-center w3-opacity">  
+  <!--div class="w3-xlarge w3-padding-32">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+ </div-->
+ <p>Website by Neil Woodroffe (2020) & powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+</footer>
+
+
+<script>
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+
+var quotes = [
+   "Act as if what you do makes a difference. It does. William James",
+   "Success is not final, failure is not fatal; it is the courage to continue that counts. Winston Churchill",
+   "Never bend your head. Always hold it high. Look the world straight in the eye. Helen Keller",
+   "What you get by achieving your goals is not as important as what you become by achieving your goals. Zig Ziglar",
+   "Believe you can and you're halfway there. Theodore Roosevelt",
+   "When you have a dream, you've got to grab it and never let go. Carol Burnett",
+   "I can't change the direction of the wind, but I can adjust my sails to always reach my destination. Jimmy Dean",
+   "Life is like riding a bicycle. To keep your balance, you must keep moving. Albert Einstein",
+   "You are never too old to set another goal or to dream a new dream. C.S. Lewis",
+   "Sometimes you will never know the value of a moment, until it becomes a memory. Dr Seuss",
+   "The most wasted of days is one without laughter. E. E. Cummings",
+   "I never dreamed about success. I worked for it. Estée Lauder",
+   "You must do the things you think you cannot do. Eleanor Roosevelt",
+   "You get what you give. Jennifer Lopez",
+   "Happiness is not by chance, but by choice. Jim Rohn",
+   "Spread love everywhere you go. Mother Teresa",
+   "Life has got all those twists and turns. You've got to hold on tight and off you go. Nicole Kidman",
+   "If you look at what you have in life, you'll always have more. Oprah Winfrey",
+   "No matter what people tell you, words and ideas can change the world. Robin Williams",
+   "A champion is defined not by their wins, but by how they can recover when they fall. Serena Williams",
+   "If you spend too much time thinking about a thing, you'll never get it done. Bruce Lee",
+   "The glow of one warm thought is to me worth more than money. Thomas Jefferson",
+   "The power of imagination makes us infinite. John Muir",
+   "In a gentle way, you can shake the world. Mahatma Gandhi",
+   "The most effective way to do it, is to do it. Amelia Earhart",
+   "If my mind can conceive it, if my heart can believe it, then I can achieve it. Muhammad Ali",
+   "The way get started is to quit talking and begin doing. Walt Disney",
+   "Creativity is intelligence having fun. Albert Einstein",
+   "Don’t be afraid to speak up for yourself. Keep fighting for your dreams! Gabby Douglas",
+   "To see what is right and not do it is a lack of courage. Confucius",
+   "Your time is limited, so don’t waste it living someone else’s life. Steve Jobs",
+   "You are more powerful than you know; you are beautiful just as you are. Melissa Etheridge",
+   "Courage is like a muscle. We strengthen it by use. Ruth Gordo",
+   "Power is not given to you. You have to take it. Beyonce Knowles" 
+]
+function newQuote() {   
+  var randomNumber = Math.floor(Math.random() * (quotes.length));
+  document.getElementById('quoteDisplay').innerHTML = quotes[randomNumber];
+}
+
+
+</script>
+
+</body>
+</html>
+
